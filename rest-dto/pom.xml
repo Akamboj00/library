@@ -8,8 +8,8 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.cardgame</groupId>
-        <artifactId>cardgame</artifactId>
+        <artifactId>library</artifactId>
+        <groupId>com.library</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

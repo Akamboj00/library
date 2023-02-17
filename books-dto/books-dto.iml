@@ -3,10 +3,10 @@
   <component name="AutoImportedSourceRoots">
     <option name="directories">
       <list>
-        <option value="C:\cardgame1\books-dto/src/main/java" />
-        <option value="C:\cardgame1\books-dto/src/main/kotlin" />
-        <option value="C:\cardgame1\books-dto/src/test/java" />
-        <option value="C:\cardgame1\books-dto/src/test/kotlin" />
+        <option value="C:\library\books-dto/src/main/java" />
+        <option value="C:\library\books-dto/src/main/kotlin" />
+        <option value="C:\library\books-dto/src/test/java" />
+        <option value="C:\library\books-dto/src/test/kotlin" />
       </list>
     </option>
   </component>

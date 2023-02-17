@@ -13,7 +13,8 @@
       <module>rest-dto</module>
       <module>rest-exception</module>
       <module>processing</module>
-      <module>books-dto</module>
+      <module>shared-dto</module>
+      <module>booking</module>
   </modules>
 
     <properties>

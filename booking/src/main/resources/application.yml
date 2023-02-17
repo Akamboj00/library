@@ -4,7 +4,7 @@ spring:
   resources:
     add-mappings: false
   application:
-    name: processing
+    name: booking
   session:
     store-type: none
   datasource:
@@ -16,3 +16,5 @@ spring:
     database: "postgresql"
     hibernate:
       ddl-auto: validate
+
+bookServiceAddress: "book:8080"

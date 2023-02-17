@@ -4,15 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>processing</artifactId>
+    <artifactId>booking</artifactId>
     <packaging>jar</packaging>
 
     <parent>
-        <artifactId>library</artifactId>
         <groupId>com.library</groupId>
+        <artifactId>library</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
 
     <dependencies>
         <dependency>
@@ -72,6 +71,16 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock-standalone</artifactId>
+            <version>2.27.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -85,6 +94,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

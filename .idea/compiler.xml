@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="books-dto" />
+        <module name="rest-dto" />
+        <module name="processing" />
+        <module name="rest-exception" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17">
+      <module name="api-gateway" target="1.6" />
+      <module name="auth" target="1.6" />
+      <module name="card-images" target="1.6" />
+      <module name="cards" target="1.6" />
+      <module name="cards-dto" target="1.6" />
+      <module name="e2e-tests" target="1.6" />
+      <module name="frontend" target="1.6" />
+      <module name="scores" target="1.6" />
+      <module name="user-collections" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

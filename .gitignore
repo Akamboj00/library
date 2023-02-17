@@ -1,0 +1,4 @@
+# Project exclude paths
+/cards-dto/target/
+/user-collections/target/
+/frontend/node_modules/

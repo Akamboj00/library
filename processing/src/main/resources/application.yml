@@ -1,0 +1,7 @@
+spring:
+  mvc:
+    throwExceptionIfNoHandlerFound: true
+  resources:
+    add-mappings: false
+  application:
+    name: processing

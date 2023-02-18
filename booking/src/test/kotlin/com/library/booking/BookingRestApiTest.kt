@@ -104,9 +104,9 @@ class BookingRestApiTest {
     }
 
     @Test
-    fun testGetTripById(){
+    fun testGetBookingById(){
 
-        val dto = BookingDto(null, 2, 1, 7)
+        val dto = BookingDto(0, 2, 1, 7)
 
         val dtoId = RestAssured.given()
             .accept(ContentType.JSON)

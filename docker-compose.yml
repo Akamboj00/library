@@ -1,0 +1,84 @@
+version: '3.3'
+
+services:
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery
+
+#  rabbitmq:
+#    image: "rabbitmq:3"
+
+  discovery:
+    image: "consul:1.8"
+    environment:
+      - CONSUL_LOCAL_CONFIG={"log_level":"info"}
+
+  redis:
+    image: "redis:latest"
+
+  postgres-booking:
+    image: "postgres:10"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
+  postgres-libraries:
+    image: "postgres:10"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
+  postgres-processing:
+    image: "postgres:10"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
+#  postgres-shipping:
+#    image: "postgres:10"
+#    environment:
+#      - POSTGRES_HOST_AUTH_METHOD=trust
+
+  booking:
+    build:
+      context: ./booking
+      dockerfile: Dockerfile
+    depends_on:
+      - api-gateway
+      - postgres-booking
+      - libraries
+      - processing
+      - discovery
+
+  libraries:
+    build:
+      context: ./libraries
+      dockerfile: Dockerfile
+    depends_on:
+      - api-gateway
+      - postgres-libraries
+      - discovery
+
+  processing:
+    build:
+      context: ./processing
+      dockerfile: Dockerfile
+    depends_on:
+      - api-gateway
+      - postgres-processing
+      - discovery
+
+
+#  shipping:
+#    build:
+#      context: ./shipping
+#      dockerfile: Dockerfile
+#    depends_on:
+#      - api-gateway
+#
+
+
+

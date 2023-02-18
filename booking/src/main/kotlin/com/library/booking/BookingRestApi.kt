@@ -45,7 +45,7 @@ class BookingRestApi(
         }
     }
 
-    @ApiOperation("Creates a new booking, checks if book quantity and that library id's are different")
+    @ApiOperation("Creates a new booking, checks book quantity")
     @PostMapping(consumes = [(MediaType.APPLICATION_JSON_UTF8_VALUE)])
     fun postBooking(
         @ApiParam("Booking DTO object, that has to contain all properties for ID")
@@ -77,6 +77,9 @@ class BookingRestApi(
         return RestResponseFactory.payload(200, dtoWithId)
     }
 
+
+
+
     @ApiOperation("Delete an existing booking based on ID")
     @DeleteMapping(path = ["/{bookingId}"])
     fun deleteBooking(@PathVariable("bookingId") bookingId: Long): ResponseEntity<WrappedResponse<Void>>{
@@ -87,7 +90,7 @@ class BookingRestApi(
                 RestResponseFactory.notFound("No booking with given ID")
             }
         }catch (e: Exception){
-            val res = WrappedResponse<Void>(500, message = "Somethin went wrong when deleting booking").validated()
+            val res = WrappedResponse<Void>(500, message = "Something went wrong when deleting booking").validated()
             ResponseEntity.status(500).body(res)
         }
     }

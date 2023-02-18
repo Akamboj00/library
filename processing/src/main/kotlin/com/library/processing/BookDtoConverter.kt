@@ -5,8 +5,13 @@ import com.library.processing.db.Book
 
 object BookDtoConverter {
     fun transform(book: Book): BookDto {
-        return book.run { BookDto(bookId, name, author, numberOfCopies) }
+        return book.run{
+            BookDto(
+            bookId, name, author, numberOfCopies
+            )
+        }
     }
+}
 
     fun transform(dto: BookDto): Book {
         return Book().apply {
@@ -16,4 +21,3 @@ object BookDtoConverter {
             numberOfCopies = dto.numberOfCopies
         }
     }
-}

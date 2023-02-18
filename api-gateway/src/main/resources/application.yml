@@ -20,8 +20,9 @@ spring:
           uri: lb://libraries
           predicates:
             - Path=/api/libraries/**
-        - id: Book
-          uri: lb://book
+        - id: processing
+          uri: lb://processing
           predicates:
             - Path=/api/book/**
+
 

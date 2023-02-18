@@ -89,7 +89,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <finalName>processing</finalName>
+                    <finalName>libraries</finalName>
                 </configuration>
             </plugin>
         </plugins>

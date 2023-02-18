@@ -18,5 +18,5 @@ INSERT INTO book (book_id, name, author, number_of_copies) VALUES
 (6, 'The Lord of the Rings','J.R.R. Tolkien', 14),
 (7, 'The Hitchhikers Guide to the Galaxy','Douglas Adams', 12),
 (8, 'The Adventures of Sherlock Holmes','Arthur Conan Doyle', 10),
-(9, 'Brave New World','Aldous Huxley', 1),
+(9, 'Brave New World','Aldous Huxley', 1);
 

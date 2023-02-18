@@ -23,8 +23,8 @@ class Application{
 
     private fun apiInfo(): ApiInfo {
         return ApiInfoBuilder()
-            .title("API for Boat service")
-            .description("REST service to serve boat related data")
+            .title("API for Processing service")
+            .description("REST service to serve processing related data")
             .version("1.0")
             .build()
     }

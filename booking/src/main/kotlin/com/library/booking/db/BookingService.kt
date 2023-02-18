@@ -1,6 +1,7 @@
 package com.library.booking.db
 
 import com.library.booksdto.BookDto
+import com.library.booksdto.LibraryDto
 import com.library.restdto.WrappedResponse
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreakerFactory
@@ -62,7 +63,23 @@ class BookingService(
                 throw IOException("Failed to fetch book from service")
                 null
             }
-        ) ?: throw IOException("No response from boat service")
+        ) ?: throw IOException("No response from booking service")
+
+        validateResponse(response)
+        return response.body.data!!
+    }
+
+    protected fun fetchLibrary(uri: URI) : LibraryDto{
+
+        val response = circuitBreaker.run(
+            {
+            client.exchange(uri, HttpMethod.GET, null, object : ParameterizedTypeReference<WrappedResponse<LibraryDto>>(){})
+            },
+            {
+            throw IOException("Failed to fetch library from service")
+            null
+            }
+        ) ?: throw IOException("No response from library service")
 
         validateResponse(response)
         return response.body.data!!

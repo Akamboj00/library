@@ -29,6 +29,8 @@ class BookingRestApi(
         )
     }
 
+
+
     @ApiOperation("Retrieve a booking based on ID")
     @GetMapping(path = ["/{bookingId}"])
     fun getBookingById(@PathVariable("bookingId") bookingId:Long): ResponseEntity<WrappedResponse<BookingDto>>{

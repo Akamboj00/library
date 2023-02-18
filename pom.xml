@@ -16,6 +16,8 @@
       <module>shared-dto</module>
       <module>booking</module>
       <module>shipping</module>
+      <module>libraries</module>
+      <module>api-gateway</module>
   </modules>
 
     <properties>

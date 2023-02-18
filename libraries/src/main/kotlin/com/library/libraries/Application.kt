@@ -1,4 +1,4 @@
-package com.library.booking
+package com.library.libraries
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -23,8 +23,8 @@ class Application{
 
     private fun apiInfo(): ApiInfo {
         return ApiInfoBuilder()
-            .title("API for Booking service")
-            .description("REST service to serve booking related data")
+            .title("API for Library service")
+            .description("REST service to serve library related data")
             .version("1.0")
             .build()
     }

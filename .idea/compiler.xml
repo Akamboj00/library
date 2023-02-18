@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="processing" />
-        <module name="rest-exception" />
         <module name="booking" />
         <module name="shared-dto" />
+        <module name="shipping" />
         <module name="rest-dto" />
+        <module name="libraries" />
+        <module name="api-gateway" />
+        <module name="processing" />
+        <module name="rest-exception" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17">
-      <module name="api-gateway" target="1.6" />
       <module name="auth" target="1.6" />
       <module name="card-images" target="1.6" />
       <module name="cards" target="1.6" />

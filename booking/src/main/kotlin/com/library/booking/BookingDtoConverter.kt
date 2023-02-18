@@ -8,7 +8,7 @@ object BookingDtoConverter {
         return booking.run { BookingDto(bookingId, originLibId, destinationLibId, bookId) }
     }
 
-    fun transform(dto: BookingDto):Booking {
+    fun transform(dto: BookingDto): Booking {
         return Booking().apply {
             bookingId = dto.bookingId
             originLibId = dto.originLibId

@@ -123,7 +123,7 @@ class BookingRestApiTest {
             .get("/$dtoId")
             .then()
             .statusCode(200)
-            .body("data.bookId", equalTo(dto.bookId!!.toInt()))
+            .body("data.bookId", equalTo(dto.bookId!!))
     }
 
 

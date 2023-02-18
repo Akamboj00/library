@@ -1,9 +1,9 @@
 package com.library.processing
 
 import com.library.booksdto.BookDto
+import com.library.processing.db.BookService
 import com.library.restdto.RestResponseFactory
 import com.library.restdto.WrappedResponse
-import com.library.processing.db.BookService
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.springframework.http.MediaType
@@ -22,7 +22,7 @@ class BookRestApi(
 
     @ApiOperation("Retrieve data from all saved books")
     @GetMapping
-    fun getBoats(): ResponseEntity<WrappedResponse<List<BookDto>>> {
+    fun getBooks(): ResponseEntity<WrappedResponse<List<BookDto>>> {
         return RestResponseFactory.payload(
             200,
             bookService.getAllBooks().map { BookDtoConverter.transform(it) }
